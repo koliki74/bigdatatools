@@ -1,4 +1,7 @@
 # Assignment 3 submission
+
+<center>Hasvitha Kolikineni</center>
+
 API used: NASA's Near Earth Objects API.
 
 Visualization tool: Matplotlib
