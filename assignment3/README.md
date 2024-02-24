@@ -26,5 +26,8 @@ Run the application with <code>python main.py</code>
 
 Charts Generated
 <li>Line Chart: Shows the count of NEOs detected each day over the current week.
+  <img src="https://github.com/koliki74/bigdatatools/blob/main/assignment3/line_chart.png" alt="Line Chart">
 <li>Bar Chart: Compares the daily NEO counts visually.
+  <img src="https://github.com/koliki74/bigdatatools/blob/main/assignment3/bar_chart.png" alt="Bar Chart">
 <li>Pie Chart: Displays the distribution of NEO detections across the week.
+  <img src="https://github.com/koliki74/bigdatatools/blob/main/assignment3/pie_chart.png" alt="Pie Chart">
