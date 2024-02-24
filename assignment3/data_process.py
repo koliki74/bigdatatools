@@ -27,10 +27,10 @@ class DataProcessor:
         plt.ylabel("Number of NEOs Detected")
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()
         if save:
             plt.savefig("line_chart.png")
-            plt.close()
+        plt.show()
+        plt.close()  # Ensure plt.close() is called to free up memory
 
     def generate_bar_chart(self, save):
         # Generates a bar chart
@@ -41,17 +41,17 @@ class DataProcessor:
         plt.ylabel("Number of NEOs Detected")
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()
         if save:
             plt.savefig("bar_chart.png")
-            plt.close()
+        plt.show()
+        plt.close()
 
     def generate_pie_chart(self, save):
         # Generates a pie chart
         plt.figure(figsize=(8, 8))
         plt.pie(self.counts, labels=self.dates, autopct="%1.1f%%", startangle=140)
         plt.title("Distribution of NEO Detections Over the Current Week")
-        plt.show()
         if save:
             plt.savefig("pie_chart.png")
-            plt.close()
+        plt.show()
+        plt.close()
