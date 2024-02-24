@@ -17,3 +17,8 @@ Before running the program,
 </li>
 
 Run the application with <code>python main.py</code>
+
+Charts Generated
+<li>Line Chart: Shows the count of NEOs detected each day over the current week.
+<li>Bar Chart: Compares the daily NEO counts visually.
+<li>Pie Chart: Displays the distribution of NEO detections across the week.
