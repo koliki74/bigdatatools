@@ -16,3 +16,11 @@ class RedisHandler:
     def insert_data(self, key, data):
         json_data = json.dumps(data)
         self.r.set(key, json_data)
+
+    # New method to retrieve and decode JSON data from Redis
+    def retrieve_data(self, key):
+        json_data = self.r.get(key)
+        if json_data:
+            return json.loads(json_data)
+        else:
+            return None

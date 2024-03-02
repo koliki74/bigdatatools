@@ -19,13 +19,19 @@ if __name__ == "__main__":
     redis_handler = RedisHandler()
 
     # Fetch Data
-    neo_data = fetcher.fetch_neo_data()
-    processor = DataProcessor(neo_data)
-
     key = "neo_weekly_data"
 
+    # Try to retrieve the data from Redis first before callin gthe API
+    neo_data = redis_handler.retrieve_data(key)
+
+    if not neo_data:
+        # If data is not in Redis, fetch it and then insert it into Redis
+        neo_data = fetcher.fetch_neo_data()
+        redis_handler.insert_data(key, neo_data)
+
+    processor = DataProcessor(neo_data)
+
     # Insert the fetched data into Redis
-    redis_handler.insert_data(key, neo_data)  # Using neo_data directly
 
     # Asking the user if they want to save the generated plots as PNGs before displaying them.
     save_input = input(
